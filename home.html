@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome  -->
+    <link
+    rel="stylesheet"
+    data-purpose="Layout StyleSheet"
+    title="Web Awesome"
+    href="/css/app-wa-462758aa1e172f82d39e1ea35e919e0a.css?vsn=d"
+  >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
+    >
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                fontFamily: {
+                    inter: ['"Inter"', 'sans-serif'],
+                },
+              colors: {
+                clifford: '#da373d',
+                offwhite: 'rgb(249, 247, 243)',
+                
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <header class="sticky top-0 z-10 ">
+        <!-- Nav-bar section start here -->    
+   <section class="">
+    <nav class=" pb-4 bg-offwhite">
+        <div class="navbar lg:w-10/12 w-[95%] mx-auto">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <button id="home-btn" class="btn py-0 bg-lime-400 text-black border-none font-bold hover:bg-none">Home</button>
+                
+              </div>
+            </div>
+            <div class="navbar-center">
+                <div><img src="assets/logo.png" alt=""></div>
+              <div class="hidden lg:block"><a class="btn btn-ghost text-xl ">Donate Bangladesh</a></div>
+            </div>
+            <div class="navbar-end">
+            <div class="flex gap-2 items-center">
+                <div class="w-5"><img src="assets/coin.png" alt=""></div>
+                <p id="flood-total-amount" class="font-semibold text-gray-500">5500 </p>
+                <p>BDT</p>
+            </div>
+              
+            </div>
+          </div>
+    </nav>
+    
+    
+   </section>
+    <!-- Nav-bar section end -->
+    </header>
+
+    <main>
+        <div>
+            <p class="text-3xl font-extrabold lg:w-10/12 mx-auto w-[90%] pt-10">Improtant FAQ <i class="fa-light fa-comment-question"></i> </p>
+        </div>
+<!-- Section -2 -->
+        <section class="lg:w-10/12 mx-auto w-[90%] pt-10">
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border py-5">
+                  <input type="radio" name="my-accordion-4" checked="checked" />
+                  <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM) ?</div>
+                  <div class="collapse-content">
+                    <p>
+                        
+The Document Object Model (DOM) is a structure that represents a web page as a tree of objects. Each part of the HTML (like elements, text, and attributes) becomes an object. JavaScript can then use the DOM to interact with and change the content or style of the webpage.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border py-5">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How do you select on element from the DOM? </div>
+                  <div class="collapse-content">
+                    <p>To select elements from the DOM:
+
+                       1/ By ID: document.getElementById('id')
+                       2/ By class: document.querySelector('.class') (selects the first match)
+                       3/ By tag: document.querySelector('tag')
+                       4/ By multiple selectors: document.querySelectorAll('selector') (for all matching elements)
+                    </p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border py-5">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">What is event delegation in the context of teh DOM, and why is it useful? </div>
+                  <div class="collapse-content">
+                    <p>Event delegation in the DOM is a technique where you attach a single event listener to a parent element instead of multiple listeners to child elements. It’s useful because it improves performance and simplifies code, especially when dealing with dynamically added elements or a large number of elements.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border py-5">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM? </div>
+                  <div class="collapse-content">
+                    <p>To manipulate an element's attributes and styles using the DOM, use element.setAttribute() to change attributes like src or href. For styles, use element.style.property (e.g., element.style.color = 'blue';) to change the CSS properties directly. Both methods update the element dynamically.</p>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <script src="home.js"></script>
+    </main>
+</body>
+</html>

@@ -26,7 +26,7 @@ if(!isNaN(noakhaliInputValue) && noakhaliInputValue >0){
 
 // Noakhali History Section--------------
     const historyItem = document.createElement("div");
-    historyItem.className = "bg-white w-full h-[100px] border border-gray-300 rounded-lg my-6";
+    historyItem.className = "bg-white lg:w-full w-[95%] mx-auto lg:h-[100px] h-[160px] border-2 rounded-lg my-6";
 
     historyItem.innerHTML =`
     <p class="text-lg font-semibold py-3 px-3">${noakhaliInputValue} Taka is Donated for Donate for Flood at Noakhali, Bangladesh</p>
@@ -67,7 +67,7 @@ document.getElementById('feni-donate-btn')
 
 // Feni History Section--------------
         const historyItem = document.createElement("div");
-        historyItem.className =  "bg-white w-full h-[100px] border border-gray-300 rounded-lg my-6";
+        historyItem.className =  "bg-white lg:w-full w-[95%] mx-auto lg:h-[100px] h-[160px] border-2 rounded-lg my-6";
 
         historyItem.innerHTML = `
         <p class="text-lg font-semibold py-3 px-3">${feniInputValue} Taka is Donated for Donate for Flood Relief in Feni,Bangladesh </p>
@@ -108,7 +108,7 @@ document.getElementById('quota-btn')
 // Quota History Section--------------
         const historyContainer = document.getElementById('history-list');
         const historyItem = document.createElement('div');
-        historyItem.className = "bg-white w-full h-[100px] border border-gray-300 rounded-lg my-6";
+        historyItem.className = "bg-white lg:w-full w-[95%] mx-auto lg:h-[100px] h-[160px] border-2 rounded-lg my-6";
 
         historyItem.innerHTML = `
         <p class="text-lg font-semibold py-3 px-3"> ${quotaInput} Taka is Donated for Aid for Injured in the Quota Movement </p>
@@ -145,3 +145,13 @@ donationBtn.addEventListener('click', function(){
     document.getElementById('sections').classList.remove("hidden");
     document.getElementById('history-list').classList.add("hidden");
 })
+
+// home html button link
+
+const blogBtn = document.getElementById('blog-btn');
+blogBtn.addEventListener('click', function(){
+    
+    window.location.href = "home.html";
+})
+    
+
