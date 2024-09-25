@@ -25,16 +25,8 @@ if(!isNaN(noakhaliInputValue) && noakhaliInputValue >0){
     modal.showModal();
 
 // Noakhali History Section--------------
-    const historyItem = document.createElement("div");
-    historyItem.className = "bg-white lg:w-full w-[95%] mx-auto lg:h-[100px] h-[160px] border-2 rounded-lg my-6";
-
-    historyItem.innerHTML =`
-    <p class="text-lg font-semibold py-3 px-3">${noakhaliInputValue} Taka is Donated for Donate for Flood at Noakhali, Bangladesh</p>
-    <p class="px-4 py-1">Date: ${new Date().toString()} </p>
+    addHistory(noakhaliInputValue, "Donate for Flood at Noakhali, Bangladesh");
     
-    `
-    const historyContainer = document.getElementById('history-list');
-    historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 }
 else{
     alert('Invalid Input')
@@ -66,17 +58,7 @@ document.getElementById('feni-donate-btn')
         modal.showModal();
 
 // Feni History Section--------------
-        const historyItem = document.createElement("div");
-        historyItem.className =  "bg-white lg:w-full w-[95%] mx-auto lg:h-[100px] h-[160px] border-2 rounded-lg my-6";
-
-        historyItem.innerHTML = `
-        <p class="text-lg font-semibold py-3 px-3">${feniInputValue} Taka is Donated for Donate for Flood Relief in Feni,Bangladesh </p>
-        <p class="px-4 py-1">Date: ${new Date().toString()} </p>
-        
-        `
-        const historyConatiner= document.getElementById('history-list');
-        historyConatiner.insertBefore(historyItem, historyConatiner.firstChild);
-
+        addHistory(feniInputValue, "Donate for Flood Relief in Feni,Bangladesh");
     }
     else{
         alert('Invalid Input');
@@ -106,17 +88,8 @@ document.getElementById('quota-btn')
         const modal = document.getElementById('my_modal_5');
         modal.showModal();
 // Quota History Section--------------
-        const historyContainer = document.getElementById('history-list');
-        const historyItem = document.createElement('div');
-        historyItem.className = "bg-white lg:w-full w-[95%] mx-auto lg:h-[100px] h-[160px] border-2 rounded-lg my-6";
-
-        historyItem.innerHTML = `
-        <p class="text-lg font-semibold py-3 px-3"> ${quotaInput} Taka is Donated for Aid for Injured in the Quota Movement </p>
-        <p class="px-4 py-1"> Date: ${new Date().toString()} </p>
-        `
-        const historyConatiner = document.getElementById('history-list');
-        historyConatiner.insertBefore(historyItem, historyConatiner.firstChild);
-        console.log('History item added:', historyItem);
+        addHistory(quotaInput, "Aid for Injured in the Quota Movement");
+        
     }
     else{
         alert('Invalid Input')
@@ -125,33 +98,16 @@ document.getElementById('quota-btn')
 })
 
 
-// Button design section----------------------------------------btn design
-const historyBtn = document.getElementById('history-btn');
-const donationBtn = document.getElementById('donation-btn');
-
-historyBtn.addEventListener('click', function(){
-    historyBtn.classList.add("bg-lime-400", "hover:bg-lime-400");
-    donationBtn.classList.remove("bg-lime-400", "hover:bg-lime-400");
-
-    document.getElementById('sections').classList.add("hidden");
-    document.getElementById('history-list').classList.remove('hidden');  
-    console.log('History button clicked, sections hidden, history shown'); 
+// Button design section---------
+document.getElementById("history-btn").addEventListener('click', function(){
+    toggleSection("history-btn", "donation-btn", "sections", "history-list");
 });
 
-donationBtn.addEventListener('click', function(){
-    donationBtn.classList.add("bg-lime-400", "hover:bg-lime-400");
-    historyBtn.classList.remove("bg-lime-400", "hover:bg-lime-400");
+document.getElementById('donation-btn').addEventListener('click', function(){
+    toggleSection("donation-btn", "history-btn", "history-list", "sections");
+});
 
-    document.getElementById('sections').classList.remove("hidden");
-    document.getElementById('history-list').classList.add("hidden");
-})
-
-// home html button link
-
-const blogBtn = document.getElementById('blog-btn');
-blogBtn.addEventListener('click', function(){
-    
-    window.location.href = "home.html";
-})
+// home html button link-----
+homeBlogBtn("blog-btn","home.html");
     
 
